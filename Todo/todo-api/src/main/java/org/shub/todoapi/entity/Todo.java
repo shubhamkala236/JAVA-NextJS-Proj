@@ -21,4 +21,7 @@ public class Todo {
     private String updatedBy;
     private LocalDateTime createdOn = LocalDateTime.now();
     private LocalDateTime  updatedOn;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
 }

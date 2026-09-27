@@ -11,7 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/todos")
 public class TodoController {
-    //Start
+
     private final TodoService todoService;
     public TodoController(TodoService todoService) {
         this.todoService = todoService;
@@ -33,13 +33,11 @@ public class TodoController {
         return todoService.createTodo(request);
     }
 
-    // PUT /todos/1
     @PutMapping("/{id}")
     public TodoResponse updateTodo(@PathVariable Long id, @RequestBody UpdateTodoRequest request) {
         return todoService.updateTodo(id, request);
     }
 
-    // DELETE /todos/1
     @DeleteMapping("/{id}")
     public void deleteTodo(@PathVariable Long id) {
         todoService.deleteTodo(id);

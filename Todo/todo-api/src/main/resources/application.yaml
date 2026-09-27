@@ -12,6 +12,9 @@ spring:
       ddl-auto : update
     show-sql : true
 
+  jwt:
+    secret:H6t98yyB26F5jQTUDtVSYXEVhXDQdEI0VV0zbL1rrbt
+
 
 server:
   port: 5000
